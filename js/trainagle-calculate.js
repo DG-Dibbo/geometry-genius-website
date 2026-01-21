@@ -1,35 +1,35 @@
 
 // Trainagle area calculate 
-function getInputByID(inputID){
-    const inputField = document.getElementById(inputID);
-    const inputValue = parseFloat(inputField.value);
-    console.log(inputValue);
-    return inputValue;
-}
+// function getInputByID(inputID){
+//     const inputField = document.getElementById(inputID);
+//     const inputValue = parseFloat(inputField.value);
+//     console.log(inputValue);
+//     return inputValue;
+// }
 
-function passInputByID(){
-    const inputBase = getInputByID('trainagle-base');
-    const inputHeight= getInputByID('trainagle-height');
+// function passInputByID(){
+//     const inputBase = getInputByID('triangle-base');
+//     const inputHeight= getInputByID('triangle-height');
 
-    let result = 0.5 * inputBase * inputHeight;
-    setInnerTextByID('trainagle-area',result);
-}
+//     let result = 0.5 * inputBase * inputHeight;
+//     setInnerTextByID('triangle-area',result);
+// }
 
-function setInnerTextByID(elementID, calculation){
-    const area = document.getElementById(elementID);
-    area.innerText = calculation;
-}
+// function setInnerTextByID(elementID, calculation){
+//     const area = document.getElementById(elementID);
+//     area.innerText = calculation;
+// }
 
 // Trainagle area calculate
-// function traingleCalculate(){
-//     const traingleBaseInput = document.getElementById('trainagle-base');
-//     const traingleHeightInput = document.getElementById('trainagle-height');
-//     const trainagleArea = document.getElementById('trainagle-area');
+function traingleCalculate(){
+    const traingleBaseInput = document.getElementById('triangle-base');
+    const traingleHeightInput = document.getElementById('triangle-height');
+    const trainagleArea = document.getElementById('triangle-area');
     
-//     // calculate Trainagle area
-//     let result = 0.5 * parseFloat(traingleBaseInput.value) * parseFloat(traingleHeightInput.value);
-//     trainagleArea.innerText =result;
-// }
+    // calculate Trainagle area
+    let result = 0.5 * parseFloat(traingleBaseInput.value * traingleHeightInput.value);
+    trainagleArea.innerText =result;
+}
 
 // Rectangle area calculate
 function rectangleCalculate(){
@@ -38,7 +38,7 @@ function rectangleCalculate(){
     const rectangleArea = document.getElementById('rectangle-area');
 
     // Rectangle calculate 
-    let rectangleCalculate = parseFloat(rectangleWidth.value) * parseFloat(rectangleLength.value);
+    let rectangleCalculate = parseFloat(rectangleWidth.value * rectangleLength.value);
     rectangleArea.innerText = rectangleCalculate;
 
 }
@@ -47,7 +47,7 @@ function rectangleCalculate(){
 
 function parallelogramCalculate(){
     const parallelogramBase = document.getElementById('parallelogram-base');
-    const parallelogramHeight = document.getElementById('parallelogram-height');
+    const parallelogramHeight = document.getElementByI('parallelogram-height');
     const parallelogramArea = document.getElementById('parallelogram-area');
 
     // Parrallelogram calculate
@@ -86,7 +86,7 @@ function ellipseCalculate(){
     const ellipseArea = document.getElementById('ellipse-area');
 
     // Ellipse calculate
-    let result = Math.PI * parseFloat(ellipseA.value * ellipseB.value);
+    let result = 3.14 * parseFloat(ellipseA.value * ellipseB.value);
     ellipseArea.innerText = result;
 
 }
